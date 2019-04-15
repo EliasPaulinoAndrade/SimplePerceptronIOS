@@ -10,11 +10,25 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var manager = PercepetronManager()
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        let (trainInput, testInput) = manager.sliceInput()
+        
+        let trainPatterns: [Pattern] = Array.init(withPatternMatrix: trainInput)
+       
+        let testPatterns: [Pattern] = Array.init(withPatternMatrix: testInput)
+        
+        let trainner = SimplePerceptronTrainner.init(patterns: trainPatterns, numberOfEpochs: 100)
+        
+        let model = trainner.train(numberOfInputs: 4)
+        
+        for testPattern in testPatterns {
+            let modelOutput = model.output(forPattern: testPattern)
+            print(modelOutput == testPattern.output ? "Equal" : "Wrong", modelOutput, testPattern.output)
+        }
     }
-
-
 }
 

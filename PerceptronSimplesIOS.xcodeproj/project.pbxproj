@@ -12,6 +12,12 @@
 		E3A48F1D2264A48F002E09F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3A48F1B2264A48F002E09F2 /* Main.storyboard */; };
 		E3A48F1F2264A491002E09F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3A48F1E2264A491002E09F2 /* Assets.xcassets */; };
 		E3A48F222264A491002E09F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3A48F202264A491002E09F2 /* LaunchScreen.storyboard */; };
+		E3A48F2E2264A4DA002E09F2 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A48F2B2264A4B7002E09F2 /* Model.swift */; };
+		E3A48F2F2264A4DC002E09F2 /* Array+initRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A48F2D2264A4B7002E09F2 /* Array+initRandom.swift */; };
+		E3A48F312264A543002E09F2 /* SimplePerceptronTrainner.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A48F302264A543002E09F2 /* SimplePerceptronTrainner.swift */; };
+		E3A48F332264A6F6002E09F2 /* Pattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A48F322264A6F6002E09F2 /* Pattern.swift */; };
+		E3A48F372264A79D002E09F2 /* Array+initPatterns.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A48F362264A79D002E09F2 /* Array+initPatterns.swift */; };
+		E3A48F392264C38E002E09F2 /* PercepetronManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A48F382264C38E002E09F2 /* PercepetronManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,12 @@
 		E3A48F1E2264A491002E09F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3A48F212264A491002E09F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E3A48F232264A491002E09F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3A48F2B2264A4B7002E09F2 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		E3A48F2D2264A4B7002E09F2 /* Array+initRandom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+initRandom.swift"; sourceTree = "<group>"; };
+		E3A48F302264A543002E09F2 /* SimplePerceptronTrainner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplePerceptronTrainner.swift; sourceTree = "<group>"; };
+		E3A48F322264A6F6002E09F2 /* Pattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pattern.swift; sourceTree = "<group>"; };
+		E3A48F362264A79D002E09F2 /* Array+initPatterns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+initPatterns.swift"; sourceTree = "<group>"; };
+		E3A48F382264C38E002E09F2 /* PercepetronManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercepetronManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 		E3A48F162264A48F002E09F2 /* PerceptronSimplesIOS */ = {
 			isa = PBXGroup;
 			children = (
+				E3A48F2A2264A4A7002E09F2 /* perceptron */,
 				E3A48F172264A48F002E09F2 /* AppDelegate.swift */,
 				E3A48F192264A48F002E09F2 /* ViewController.swift */,
 				E3A48F1B2264A48F002E09F2 /* Main.storyboard */,
@@ -62,6 +75,27 @@
 				E3A48F232264A491002E09F2 /* Info.plist */,
 			);
 			path = PerceptronSimplesIOS;
+			sourceTree = "<group>";
+		};
+		E3A48F2A2264A4A7002E09F2 /* perceptron */ = {
+			isa = PBXGroup;
+			children = (
+				E3A48F2C2264A4B7002E09F2 /* extensions */,
+				E3A48F2B2264A4B7002E09F2 /* Model.swift */,
+				E3A48F302264A543002E09F2 /* SimplePerceptronTrainner.swift */,
+				E3A48F322264A6F6002E09F2 /* Pattern.swift */,
+				E3A48F382264C38E002E09F2 /* PercepetronManager.swift */,
+			);
+			path = perceptron;
+			sourceTree = "<group>";
+		};
+		E3A48F2C2264A4B7002E09F2 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E3A48F2D2264A4B7002E09F2 /* Array+initRandom.swift */,
+				E3A48F362264A79D002E09F2 /* Array+initPatterns.swift */,
+			);
+			path = extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +169,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3A48F332264A6F6002E09F2 /* Pattern.swift in Sources */,
+				E3A48F312264A543002E09F2 /* SimplePerceptronTrainner.swift in Sources */,
+				E3A48F2F2264A4DC002E09F2 /* Array+initRandom.swift in Sources */,
+				E3A48F2E2264A4DA002E09F2 /* Model.swift in Sources */,
 				E3A48F1A2264A48F002E09F2 /* ViewController.swift in Sources */,
+				E3A48F392264C38E002E09F2 /* PercepetronManager.swift in Sources */,
 				E3A48F182264A48F002E09F2 /* AppDelegate.swift in Sources */,
+				E3A48F372264A79D002E09F2 /* Array+initPatterns.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +325,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z8P97P3QB4;
 				INFOPLIST_FILE = PerceptronSimplesIOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -303,6 +344,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z8P97P3QB4;
 				INFOPLIST_FILE = PerceptronSimplesIOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
