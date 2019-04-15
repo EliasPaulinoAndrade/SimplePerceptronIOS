@@ -17,9 +17,23 @@
 		E3A48F312264A543002E09F2 /* SimplePerceptronTrainner.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A48F302264A543002E09F2 /* SimplePerceptronTrainner.swift */; };
 		E3A48F332264A6F6002E09F2 /* Pattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A48F322264A6F6002E09F2 /* Pattern.swift */; };
 		E3A48F372264A79D002E09F2 /* Array+initPatterns.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A48F362264A79D002E09F2 /* Array+initPatterns.swift */; };
-		E3A48F392264C38E002E09F2 /* PercepetronManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A48F382264C38E002E09F2 /* PercepetronManager.swift */; };
+		E3A48F392264C38E002E09F2 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A48F382264C38E002E09F2 /* DataManager.swift */; };
 		E3A48F3D22650589002E09F2 /* irisData in Resources */ = {isa = PBXBuildFile; fileRef = E3A48F3C22650589002E09F2 /* irisData */; };
+		E3A48F3F226524B8002E09F2 /* SimplePerceptronTester.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A48F3E226524B8002E09F2 /* SimplePerceptronTester.swift */; };
+		E3A48F47226528F5002E09F2 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A48F46226528F5002E09F2 /* main.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E3A48F42226528F5002E09F2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		E3A48F142264A48F002E09F2 /* PerceptronSimplesIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PerceptronSimplesIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -34,12 +48,22 @@
 		E3A48F302264A543002E09F2 /* SimplePerceptronTrainner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplePerceptronTrainner.swift; sourceTree = "<group>"; };
 		E3A48F322264A6F6002E09F2 /* Pattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pattern.swift; sourceTree = "<group>"; };
 		E3A48F362264A79D002E09F2 /* Array+initPatterns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+initPatterns.swift"; sourceTree = "<group>"; };
-		E3A48F382264C38E002E09F2 /* PercepetronManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercepetronManager.swift; sourceTree = "<group>"; };
+		E3A48F382264C38E002E09F2 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		E3A48F3C22650589002E09F2 /* irisData */ = {isa = PBXFileReference; lastKnownFileType = text; path = irisData; sourceTree = "<group>"; };
+		E3A48F3E226524B8002E09F2 /* SimplePerceptronTester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplePerceptronTester.swift; sourceTree = "<group>"; };
+		E3A48F44226528F5002E09F2 /* SimplePerceptronMacOS */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SimplePerceptronMacOS; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3A48F46226528F5002E09F2 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		E3A48F112264A48F002E09F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3A48F41226528F5002E09F2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -53,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				E3A48F162264A48F002E09F2 /* PerceptronSimplesIOS */,
+				E3A48F45226528F5002E09F2 /* SimplePerceptronMacOS */,
 				E3A48F152264A48F002E09F2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				E3A48F142264A48F002E09F2 /* PerceptronSimplesIOS.app */,
+				E3A48F44226528F5002E09F2 /* SimplePerceptronMacOS */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -86,8 +112,9 @@
 				E3A48F2B2264A4B7002E09F2 /* Model.swift */,
 				E3A48F302264A543002E09F2 /* SimplePerceptronTrainner.swift */,
 				E3A48F322264A6F6002E09F2 /* Pattern.swift */,
-				E3A48F382264C38E002E09F2 /* PercepetronManager.swift */,
+				E3A48F382264C38E002E09F2 /* DataManager.swift */,
 				E3A48F3C22650589002E09F2 /* irisData */,
+				E3A48F3E226524B8002E09F2 /* SimplePerceptronTester.swift */,
 			);
 			path = perceptron;
 			sourceTree = "<group>";
@@ -99,6 +126,14 @@
 				E3A48F362264A79D002E09F2 /* Array+initPatterns.swift */,
 			);
 			path = extensions;
+			sourceTree = "<group>";
+		};
+		E3A48F45226528F5002E09F2 /* SimplePerceptronMacOS */ = {
+			isa = PBXGroup;
+			children = (
+				E3A48F46226528F5002E09F2 /* main.swift */,
+			);
+			path = SimplePerceptronMacOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -121,6 +156,23 @@
 			productReference = E3A48F142264A48F002E09F2 /* PerceptronSimplesIOS.app */;
 			productType = "com.apple.product-type.application";
 		};
+		E3A48F43226528F5002E09F2 /* SimplePerceptronMacOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E3A48F48226528F5002E09F2 /* Build configuration list for PBXNativeTarget "SimplePerceptronMacOS" */;
+			buildPhases = (
+				E3A48F40226528F5002E09F2 /* Sources */,
+				E3A48F41226528F5002E09F2 /* Frameworks */,
+				E3A48F42226528F5002E09F2 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimplePerceptronMacOS;
+			productName = SimplePerceptronMacOS;
+			productReference = E3A48F44226528F5002E09F2 /* SimplePerceptronMacOS */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -132,6 +184,9 @@
 				ORGANIZATIONNAME = "Elias Paulino";
 				TargetAttributes = {
 					E3A48F132264A48F002E09F2 = {
+						CreatedOnToolsVersion = 10.2;
+					};
+					E3A48F43226528F5002E09F2 = {
 						CreatedOnToolsVersion = 10.2;
 					};
 				};
@@ -150,6 +205,7 @@
 			projectRoot = "";
 			targets = (
 				E3A48F132264A48F002E09F2 /* PerceptronSimplesIOS */,
+				E3A48F43226528F5002E09F2 /* SimplePerceptronMacOS */,
 			);
 		};
 /* End PBXProject section */
@@ -175,12 +231,21 @@
 			files = (
 				E3A48F332264A6F6002E09F2 /* Pattern.swift in Sources */,
 				E3A48F312264A543002E09F2 /* SimplePerceptronTrainner.swift in Sources */,
+				E3A48F3F226524B8002E09F2 /* SimplePerceptronTester.swift in Sources */,
 				E3A48F2F2264A4DC002E09F2 /* Array+initRandom.swift in Sources */,
 				E3A48F2E2264A4DA002E09F2 /* Model.swift in Sources */,
 				E3A48F1A2264A48F002E09F2 /* ViewController.swift in Sources */,
-				E3A48F392264C38E002E09F2 /* PercepetronManager.swift in Sources */,
+				E3A48F392264C38E002E09F2 /* DataManager.swift in Sources */,
 				E3A48F182264A48F002E09F2 /* AppDelegate.swift in Sources */,
 				E3A48F372264A79D002E09F2 /* Array+initPatterns.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3A48F40226528F5002E09F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3A48F47226528F5002E09F2 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +425,32 @@
 			};
 			name = Release;
 		};
+		E3A48F49226528F5002E09F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z8P97P3QB4;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		E3A48F4A226528F5002E09F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z8P97P3QB4;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -377,6 +468,15 @@
 			buildConfigurations = (
 				E3A48F272264A491002E09F2 /* Debug */,
 				E3A48F282264A491002E09F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E3A48F48226528F5002E09F2 /* Build configuration list for PBXNativeTarget "SimplePerceptronMacOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3A48F49226528F5002E09F2 /* Debug */,
+				E3A48F4A226528F5002E09F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

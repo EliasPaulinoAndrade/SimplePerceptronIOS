@@ -10,21 +10,32 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var manager = PercepetronManager()
+    var dataManager = DataManager()
+    
  
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let (trainPatterns, testPatterns) = manager.sliceInput()
+        let (trainPatterns, testPatterns) = dataManager.sliceInput()
         
-        let trainner = SimplePerceptronTrainner.init(patterns: trainPatterns, numberOfInputs: 4, numberOfEpochs: 100)
+        let trainner = SimplePerceptronTrainner(
+            patterns: trainPatterns,
+            numberOfInputs: 4,
+            numberOfEpochs: 100
+        )
         
         let model = trainner.train()
         
-        for testPattern in testPatterns {
-            let modelOutput = model.output(forPattern: testPattern)
-            print(modelOutput == testPattern.output ? "Equal" : "Wrong", modelOutput, testPattern.output)
-        }
+        let tester = SimplePerceptronTester()
+        
+        print(
+            tester.predictPercentual(
+                forResults: tester.test(
+                    model: model,
+                    withPatterns: testPatterns
+                )
+            )
+        )
     }
 }
 

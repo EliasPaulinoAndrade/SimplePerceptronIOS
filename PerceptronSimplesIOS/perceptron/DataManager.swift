@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct PercepetronManager {
+struct DataManager {
     lazy var irisPatterns: [Pattern]? = {
         guard let irisPath = Bundle.main.path(forResource: "irisData", ofType: nil),
               let fileString = try? String.init(contentsOfFile: irisPath) else {
