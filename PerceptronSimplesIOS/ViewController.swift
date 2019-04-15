@@ -15,15 +15,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let (trainInput, testInput) = manager.sliceInput()
+        let (trainPatterns, testPatterns) = manager.sliceInput()
         
-        let trainPatterns: [Pattern] = Array.init(withPatternMatrix: trainInput)
-       
-        let testPatterns: [Pattern] = Array.init(withPatternMatrix: testInput)
+        let trainner = SimplePerceptronTrainner.init(patterns: trainPatterns, numberOfInputs: 4, numberOfEpochs: 100)
         
-        let trainner = SimplePerceptronTrainner.init(patterns: trainPatterns, numberOfEpochs: 100)
-        
-        let model = trainner.train(numberOfInputs: 4)
+        let model = trainner.train()
         
         for testPattern in testPatterns {
             let modelOutput = model.output(forPattern: testPattern)

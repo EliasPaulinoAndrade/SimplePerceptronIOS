@@ -13,14 +13,16 @@ struct SimplePerceptronTrainner {
     var rate: Double = 0.5
     var numberOfEpochs: Int
     var patterns: [Pattern]
+    var numberOfInputs: Int
     
-    init(patterns: [Pattern], numberOfEpochs: Int) {
+    init(patterns: [Pattern], numberOfInputs: Int, numberOfEpochs: Int) {
         
         self.numberOfEpochs = numberOfEpochs
         self.patterns = patterns
+        self.numberOfInputs = numberOfInputs
     }
     
-    func train(numberOfInputs: Int) -> Model {
+    func train() -> Model {
         
         var model = Model.init(withNumberOfInputs: numberOfInputs)
         
@@ -35,11 +37,12 @@ struct SimplePerceptronTrainner {
                 let outputError = waitedOutput - modelOutput
                 
                 if outputError != 0 {
-                    errorHappend = true
                     
                     if let newWeights = vectorSum(vector1: Double(outputError) * rate * pattern, vector2: model.weights) {
                         model.weights = newWeights
                     }
+                } else {
+                    errorHappend = true
                 }
             }
             

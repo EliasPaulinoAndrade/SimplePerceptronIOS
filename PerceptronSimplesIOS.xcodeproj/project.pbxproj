@@ -18,6 +18,7 @@
 		E3A48F332264A6F6002E09F2 /* Pattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A48F322264A6F6002E09F2 /* Pattern.swift */; };
 		E3A48F372264A79D002E09F2 /* Array+initPatterns.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A48F362264A79D002E09F2 /* Array+initPatterns.swift */; };
 		E3A48F392264C38E002E09F2 /* PercepetronManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A48F382264C38E002E09F2 /* PercepetronManager.swift */; };
+		E3A48F3D22650589002E09F2 /* irisData in Resources */ = {isa = PBXBuildFile; fileRef = E3A48F3C22650589002E09F2 /* irisData */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		E3A48F322264A6F6002E09F2 /* Pattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pattern.swift; sourceTree = "<group>"; };
 		E3A48F362264A79D002E09F2 /* Array+initPatterns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+initPatterns.swift"; sourceTree = "<group>"; };
 		E3A48F382264C38E002E09F2 /* PercepetronManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercepetronManager.swift; sourceTree = "<group>"; };
+		E3A48F3C22650589002E09F2 /* irisData */ = {isa = PBXFileReference; lastKnownFileType = text; path = irisData; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				E3A48F302264A543002E09F2 /* SimplePerceptronTrainner.swift */,
 				E3A48F322264A6F6002E09F2 /* Pattern.swift */,
 				E3A48F382264C38E002E09F2 /* PercepetronManager.swift */,
+				E3A48F3C22650589002E09F2 /* irisData */,
 			);
 			path = perceptron;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3A48F222264A491002E09F2 /* LaunchScreen.storyboard in Resources */,
+				E3A48F3D22650589002E09F2 /* irisData in Resources */,
 				E3A48F1F2264A491002E09F2 /* Assets.xcassets in Resources */,
 				E3A48F1D2264A48F002E09F2 /* Main.storyboard in Resources */,
 			);
