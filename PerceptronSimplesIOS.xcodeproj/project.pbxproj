@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E3576B952265F69A0080E265 /* PredictionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3576B942265F69A0080E265 /* PredictionResult.swift */; };
 		E3A48F182264A48F002E09F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A48F172264A48F002E09F2 /* AppDelegate.swift */; };
 		E3A48F1A2264A48F002E09F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A48F192264A48F002E09F2 /* ViewController.swift */; };
 		E3A48F1D2264A48F002E09F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3A48F1B2264A48F002E09F2 /* Main.storyboard */; };
@@ -51,6 +52,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E3576B942265F69A0080E265 /* PredictionResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionResult.swift; sourceTree = "<group>"; };
 		E3A48F142264A48F002E09F2 /* PerceptronSimplesIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PerceptronSimplesIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3A48F172264A48F002E09F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3A48F192264A48F002E09F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				E3A48F322264A6F6002E09F2 /* Pattern.swift */,
 				E3A48F382264C38E002E09F2 /* DataManager.swift */,
 				E3A48F3E226524B8002E09F2 /* SimplePerceptronTester.swift */,
+				E3576B942265F69A0080E265 /* PredictionResult.swift */,
 			);
 			path = perceptron;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3A48F7B22654D79002E09F2 /* Array+initRandom.swift in Sources */,
+				E3576B952265F69A0080E265 /* PredictionResult.swift in Sources */,
 				E3A48F7722654D70002E09F2 /* Pattern.swift in Sources */,
 				E3A48F7822654D70002E09F2 /* DataManager.swift in Sources */,
 				E3A48F7622654D70002E09F2 /* SimplePerceptronTrainner.swift in Sources */,

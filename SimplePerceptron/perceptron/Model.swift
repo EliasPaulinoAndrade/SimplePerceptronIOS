@@ -24,13 +24,13 @@ public struct Model {
         return activation
     }
     
-    func output(forPattern pattern: Pattern) -> Int {
+    func output(forPattern pattern: Pattern) -> PredictionResult {
         let activationValue = activation(forPattern: pattern)
         
         guard activationValue != -1 else {
-            return -1
+            return PredictionResult(activation: activationValue, output: -1)
         }
         
-        return activationValue > 0 ? 1 : 0
+        return PredictionResult(activation: activationValue, output: activationValue > 0 ? 1 : 0)
     }
 }

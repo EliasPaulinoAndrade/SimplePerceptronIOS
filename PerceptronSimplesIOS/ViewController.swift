@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let (trainPatterns, testPatterns) = helper.loadIrisData()
+        let (trainPatterns, testPatterns) = helper.loadIrisDataForSetosa()
         
         let trainner = SimplePerceptronTrainner(
             patterns: trainPatterns,

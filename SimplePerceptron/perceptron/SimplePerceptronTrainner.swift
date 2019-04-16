@@ -31,7 +31,7 @@ public struct SimplePerceptronTrainner {
         for _ in 0..<numberOfEpochs {
             errorHappend = false
             for pattern in patterns {
-                let modelOutput = model.output(forPattern: pattern)
+                let modelOutput = model.output(forPattern: pattern).output
                 let waitedOutput = pattern.output
                 
                 let outputError = waitedOutput - modelOutput

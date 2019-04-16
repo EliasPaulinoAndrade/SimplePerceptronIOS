@@ -12,7 +12,7 @@ import SimplePerceptron
 class PerceptronHelper {
     var dataManager = DataManager()
     
-    func loadIrisData() -> (train: [Pattern], test: [Pattern]) {
+    func loadIrisData(forIrisType irisType: String) -> (train: [Pattern], test: [Pattern]) {
         guard let patterns = dataManager.loadPatternsFromFile(withName: "irisData", inBundle: Bundle.main, completion: { columns in
             
             var lineVariables = columns
@@ -24,7 +24,7 @@ class PerceptronHelper {
                 return Double($0)
             }
             
-            if outputStringValue == "Iris-setosa" {
+            if outputStringValue == irisType {
                 outputValue = 0
             } else {
                 outputValue = 1
@@ -39,5 +39,17 @@ class PerceptronHelper {
         }
         
         return dataManager.slicePatterns(patterns)
+    }
+    
+    func loadIrisDataForSetosa() -> (train: [Pattern], test: [Pattern]) {
+        return loadIrisData(forIrisType: "Iris-setosa")
+    }
+    
+    func loadIrisDataForVersicolor() -> (train: [Pattern], test: [Pattern]) {
+        return loadIrisData(forIrisType: "Iris-versicolor")
+    }
+    
+    func loadIrisDataForVirginica() -> (train: [Pattern], test: [Pattern]) {
+        return loadIrisData(forIrisType: "Iris-virginica")
     }
 }

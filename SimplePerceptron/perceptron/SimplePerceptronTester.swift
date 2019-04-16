@@ -19,7 +19,7 @@ public struct SimplePerceptronTester {
         for testPattern in patterns {
             let modelOutput = model.output(forPattern: testPattern)
             
-            modelOutput == testPattern.output ?
+            modelOutput.output == testPattern.output ?
                 testResults.append(true) : testResults.append(false)
         }
         
