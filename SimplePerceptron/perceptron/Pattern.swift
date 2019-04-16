@@ -8,11 +8,11 @@
 
 import Foundation
 
-struct Pattern {
+public struct Pattern {
     var input: [Double]
     var output: Int
     
-    init(input: [Double], output: Int) {
+    public init(input: [Double], output: Int) {
         self.input = input
         self.input.insert(-1, at: 0)
         self.output = output

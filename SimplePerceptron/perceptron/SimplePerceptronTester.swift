@@ -8,8 +8,11 @@
 
 import Foundation
 
-struct SimplePerceptronTester {
-    func test(model: Model, withPatterns patterns: [Pattern]) -> [Bool] {
+public struct SimplePerceptronTester {
+    
+    public init() {}
+    
+    public func test(model: Model, withPatterns patterns: [Pattern]) -> [Bool] {
         
         var testResults: [Bool] = []
         
@@ -23,7 +26,7 @@ struct SimplePerceptronTester {
         return testResults
     }
     
-    func predictPercentual(forResults results: [Bool]) -> (correct: Double, wrong: Double) {
+    public func predictPercentual(forResults results: [Bool]) -> (correct: Double, wrong: Double) {
         let total = results.count
         let correctResults = results.reduce(0) { (currentSum, result) -> Int in
             return result ? currentSum + 1 : currentSum

@@ -7,16 +7,16 @@
 //
 
 import UIKit
+import SimplePerceptron
 
 class ViewController: UIViewController {
 
-    var dataManager = DataManager()
-    
+    var helper = PerceptronHelper.init()
  
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let (trainPatterns, testPatterns) = dataManager.sliceInput()
+        let (trainPatterns, testPatterns) = helper.loadIrisData()
         
         let trainner = SimplePerceptronTrainner(
             patterns: trainPatterns,

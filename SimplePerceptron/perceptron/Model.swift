@@ -1,6 +1,6 @@
 import Foundation
 
-struct Model {
+public struct Model {
     
     var weights: [Double]
     
