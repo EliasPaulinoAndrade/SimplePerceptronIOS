@@ -17,16 +17,30 @@ public struct DataManager {
         inBundle bundle: Bundle = Bundle.main,
         completion: ([Substring]) -> Pattern) -> [Pattern]? {
         
+        let patternsData = loadDataLinesFromFile(withName: fileName)
+        return mapPatternsData(dataStringLines: patternsData, completion: completion)
+    }
+    
+    public func loadDataLinesFromFile(
+        withName fileName: String,
+        inBundle bundle: Bundle = Bundle.main) -> Array<Substring> {
+        
         guard let irisPath = bundle.path(forResource: fileName, ofType: nil),
               let fileString = try? String.init(contentsOfFile: irisPath) else {
                 
-            return nil
+            return []
         }
         
         let fileLines = fileString.split(separator: "\n")
+        
+        return fileLines
+    }
+    
+    func mapPatternsData(dataStringLines: Array<Substring>, completion: ([Substring]) -> Pattern) -> [Pattern]? {
+        
         var patterns: [Pattern] = []
         
-        for line in fileLines {
+        for line in dataStringLines {
             let lineVariables = line.split(separator: ",")
             
             let pattern = completion(lineVariables)

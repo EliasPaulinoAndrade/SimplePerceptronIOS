@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		E3576B952265F69A0080E265 /* PredictionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3576B942265F69A0080E265 /* PredictionResult.swift */; };
+		E3576B972265FE740080E265 /* ComposedPerceptronTrainner.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3576B962265FE740080E265 /* ComposedPerceptronTrainner.swift */; };
+		E3576B99226601110080E265 /* ComposedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3576B98226601110080E265 /* ComposedModel.swift */; };
+		E3576B9B226609AD0080E265 /* ComposedPerceptronTester.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3576B9A226609AD0080E265 /* ComposedPerceptronTester.swift */; };
 		E3A48F182264A48F002E09F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A48F172264A48F002E09F2 /* AppDelegate.swift */; };
 		E3A48F1A2264A48F002E09F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A48F192264A48F002E09F2 /* ViewController.swift */; };
 		E3A48F1D2264A48F002E09F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3A48F1B2264A48F002E09F2 /* Main.storyboard */; };
@@ -53,6 +56,9 @@
 
 /* Begin PBXFileReference section */
 		E3576B942265F69A0080E265 /* PredictionResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionResult.swift; sourceTree = "<group>"; };
+		E3576B962265FE740080E265 /* ComposedPerceptronTrainner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposedPerceptronTrainner.swift; sourceTree = "<group>"; };
+		E3576B98226601110080E265 /* ComposedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposedModel.swift; sourceTree = "<group>"; };
+		E3576B9A226609AD0080E265 /* ComposedPerceptronTester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposedPerceptronTester.swift; sourceTree = "<group>"; };
 		E3A48F142264A48F002E09F2 /* PerceptronSimplesIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PerceptronSimplesIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3A48F172264A48F002E09F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3A48F192264A48F002E09F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +141,9 @@
 				E3A48F382264C38E002E09F2 /* DataManager.swift */,
 				E3A48F3E226524B8002E09F2 /* SimplePerceptronTester.swift */,
 				E3576B942265F69A0080E265 /* PredictionResult.swift */,
+				E3576B962265FE740080E265 /* ComposedPerceptronTrainner.swift */,
+				E3576B98226601110080E265 /* ComposedModel.swift */,
+				E3576B9A226609AD0080E265 /* ComposedPerceptronTester.swift */,
 			);
 			path = perceptron;
 			sourceTree = "<group>";
@@ -294,9 +303,12 @@
 				E3A48F7B22654D79002E09F2 /* Array+initRandom.swift in Sources */,
 				E3576B952265F69A0080E265 /* PredictionResult.swift in Sources */,
 				E3A48F7722654D70002E09F2 /* Pattern.swift in Sources */,
+				E3576B9B226609AD0080E265 /* ComposedPerceptronTester.swift in Sources */,
 				E3A48F7822654D70002E09F2 /* DataManager.swift in Sources */,
+				E3576B972265FE740080E265 /* ComposedPerceptronTrainner.swift in Sources */,
 				E3A48F7622654D70002E09F2 /* SimplePerceptronTrainner.swift in Sources */,
 				E3A48F7522654D6B002E09F2 /* Model.swift in Sources */,
+				E3576B99226601110080E265 /* ComposedModel.swift in Sources */,
 				E3A48F7A22654D70002E09F2 /* SimplePerceptronTester.swift in Sources */,
 				E3A48F7C22654D79002E09F2 /* Array+initPatterns.swift in Sources */,
 			);

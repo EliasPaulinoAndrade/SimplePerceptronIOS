@@ -6,7 +6,7 @@ public struct Model {
     
     init(withNumberOfInputs numberOfInputs: Int) {
         
-        weights = Array.init(withSize: numberOfInputs + 1, randomRange: 0.0 ..< 1.0)
+        weights = Array.init(withSize: numberOfInputs, randomRange: 0.0 ..< 1.0)
         
     }
     

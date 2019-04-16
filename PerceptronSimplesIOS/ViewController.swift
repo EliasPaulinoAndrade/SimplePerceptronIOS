@@ -16,26 +16,35 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let (trainPatterns, testPatterns) = helper.loadIrisDataForSetosa()
+        let (setosaTrainPatterns, setosaTestPatterns) = helper.loadIrisDataForSetosa()
+        let (versicolorTrainPatterns, versicolorTestPatterns) = helper.loadIrisDataForVersicolor()
+        let (virginicaTrainPatterns, virginicaTestPatterns) = helper.loadIrisDataForVirginica()
         
-        let trainner = SimplePerceptronTrainner(
-            patterns: trainPatterns,
-            numberOfInputs: 4,
+        let trainner = ComposedPerceptronTrainner.init(
+            patterns: [setosaTrainPatterns, versicolorTrainPatterns, virginicaTrainPatterns],
             numberOfEpochs: 100
         )
         
-        let model = trainner.train()
+        let composedModel = trainner.train()
         
-        let tester = SimplePerceptronTester()
-        
-        print(
-            tester.predictPercentual(
-                forResults: tester.test(
-                    model: model,
-                    withPatterns: testPatterns
-                )
-            )
-        )
+    
+//        let trainner = SimplePerceptronTrainner(
+//            patterns: trainPatterns,
+//            numberOfEpochs: 100
+//        )
+//
+//        let model = trainner.train()
+//
+//        let tester = SimplePerceptronTester()
+//
+//        print(
+//            tester.predictPercentual(
+//                forResults: tester.test(
+//                    model: model,
+//                    withPatterns: testPatterns
+//                )
+//            )
+//        )
     }
 }
 

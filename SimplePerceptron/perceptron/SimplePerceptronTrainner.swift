@@ -15,11 +15,11 @@ public struct SimplePerceptronTrainner {
     var patterns: [Pattern]
     var numberOfInputs: Int
     
-    public init(patterns: [Pattern], numberOfInputs: Int, numberOfEpochs: Int) {
+    public init(patterns: [Pattern], numberOfEpochs: Int) {
         
         self.numberOfEpochs = numberOfEpochs
         self.patterns = patterns
-        self.numberOfInputs = numberOfInputs
+        self.numberOfInputs = patterns.first?.input.count ?? 0
     }
     
     public func train() -> Model {
