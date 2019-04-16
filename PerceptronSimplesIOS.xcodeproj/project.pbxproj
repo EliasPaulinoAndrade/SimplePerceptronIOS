@@ -112,7 +112,7 @@
 		E3A48F162264A48F002E09F2 /* PerceptronSimplesIOS */ = {
 			isa = PBXGroup;
 			children = (
-				E3A48F7D226550AC002E09F2 /* iris */,
+				E3A48F7D226550AC002E09F2 /* Iris Predict */,
 				E3A48F172264A48F002E09F2 /* AppDelegate.swift */,
 				E3A48F192264A48F002E09F2 /* ViewController.swift */,
 				E3A48F1B2264A48F002E09F2 /* Main.storyboard */,
@@ -155,13 +155,13 @@
 			path = SimplePerceptron;
 			sourceTree = "<group>";
 		};
-		E3A48F7D226550AC002E09F2 /* iris */ = {
+		E3A48F7D226550AC002E09F2 /* Iris Predict */ = {
 			isa = PBXGroup;
 			children = (
 				E3A48F3C22650589002E09F2 /* irisData */,
 				E3A48F7F22655179002E09F2 /* PerceptronHelper.swift */,
 			);
-			path = iris;
+			path = "Iris Predict";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
