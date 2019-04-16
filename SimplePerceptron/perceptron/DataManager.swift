@@ -23,7 +23,7 @@ public struct DataManager {
     
     public func loadDataLinesFromFile(
         withName fileName: String,
-        inBundle bundle: Bundle = Bundle.main) -> Array<Substring> {
+        inBundle bundle: Bundle = Bundle.main) -> [Substring] {
         
         guard let irisPath = bundle.path(forResource: fileName, ofType: nil),
               let fileString = try? String.init(contentsOfFile: irisPath) else {
@@ -36,7 +36,7 @@ public struct DataManager {
         return fileLines
     }
     
-    func mapPatternsData(dataStringLines: Array<Substring>, completion: ([Substring]) -> Pattern) -> [Pattern]? {
+    public func mapPatternsData(dataStringLines: Array<Substring>, completion: ([Substring]) -> Pattern) -> [Pattern]? {
         
         var patterns: [Pattern] = []
         
@@ -51,16 +51,12 @@ public struct DataManager {
         return patterns
     }
     
-    public mutating func slicePatterns(_ patterns: [Pattern]) -> (train: [Pattern], test: [Pattern]) {
+    public func slicePatterns<T>(_ patterns: [T]) -> (train: [T], test: [T]) {
 
-        var suffPatterns = patterns.shuffled()
+        let suffPatterns = patterns.shuffled()
+
+        let (trainSlice, testSlice) = suffPatterns.slice(sliceRate: 0.8)
         
-        let trainSliceCount = Int(Double(suffPatterns.count) * 0.8)
-        
-        let trainSlice = suffPatterns[0..<trainSliceCount]
-        
-        let testSlice = suffPatterns[trainSliceCount..<suffPatterns.count]
-        
-        return (Array(trainSlice), Array(testSlice))
+        return (trainSlice, testSlice)
     }
 }

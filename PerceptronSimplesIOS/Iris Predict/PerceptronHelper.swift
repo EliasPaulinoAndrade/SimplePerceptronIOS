@@ -12,44 +12,55 @@ import SimplePerceptron
 class PerceptronHelper {
     var dataManager = DataManager()
     
-    func loadIrisData(forIrisType irisType: String) -> (train: [Pattern], test: [Pattern]) {
-        guard let patterns = dataManager.loadPatternsFromFile(withName: "irisData", inBundle: Bundle.main, completion: { columns in
-            
+    func slicedIrisDataLines() -> (train: [Substring], test: [Substring]) {
+        
+        let irisDataLines = dataManager.loadDataLinesFromFile(withName: "irisData")
+        
+        return dataManager.slicePatterns(irisDataLines)
+    }
+    
+    func loadIrisPatterns(forIrisType irisType: String, withDataLines dataLines: [Substring]) -> [Pattern] {
+        
+        let patternsMapCompletion = { (columns: [Substring]) -> Pattern in
             var lineVariables = columns
-            
+
             let outputStringValue = lineVariables.removeLast()
             var outputValue: Int
-            
+
             let inputValues = lineVariables.compactMap {
                 return Double($0)
             }
-            
+
             if outputStringValue == irisType {
                 outputValue = 0
             } else {
                 outputValue = 1
             }
-            
+
             let pattern = Pattern.init(input: inputValues, output: outputValue)
-            
+
             return pattern
-        }) else {
-            
-            return ([], [])
         }
         
-        return dataManager.slicePatterns(patterns)
+        guard let patterns = dataManager.mapPatternsData(
+            dataStringLines: dataLines,
+            completion: patternsMapCompletion) else {
+                
+            return []
+        }
+        
+        return patterns
     }
     
-    func loadIrisDataForSetosa() -> (train: [Pattern], test: [Pattern]) {
-        return loadIrisData(forIrisType: "Iris-setosa")
+    func loadIrisDataForSetosa(withDataLines dataLines: [Substring]) -> [Pattern] {
+        return loadIrisPatterns(forIrisType: "Iris-setosa", withDataLines: dataLines)
     }
     
-    func loadIrisDataForVersicolor() -> (train: [Pattern], test: [Pattern]) {
-        return loadIrisData(forIrisType: "Iris-versicolor")
+    func loadIrisDataForVersicolor(withDataLines dataLines: [Substring]) -> [Pattern] {
+        return loadIrisPatterns(forIrisType: "Iris-versicolor", withDataLines: dataLines)
     }
     
-    func loadIrisDataForVirginica() -> (train: [Pattern], test: [Pattern]) {
-        return loadIrisData(forIrisType: "Iris-virginica")
+    func loadIrisDataForVirginica(withDataLines dataLines: [Substring]) -> [Pattern] {
+        return loadIrisPatterns(forIrisType: "Iris-virginica", withDataLines: dataLines)
     }
 }

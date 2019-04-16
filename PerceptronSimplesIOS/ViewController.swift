@@ -16,16 +16,31 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let (setosaTrainPatterns, setosaTestPatterns) = helper.loadIrisDataForSetosa()
-        let (versicolorTrainPatterns, versicolorTestPatterns) = helper.loadIrisDataForVersicolor()
-        let (virginicaTrainPatterns, virginicaTestPatterns) = helper.loadIrisDataForVirginica()
+        let (train, _) = helper.slicedIrisDataLines()
+        
+        let setosaTrainPatterns = helper.loadIrisDataForSetosa(withDataLines: train)
+        let versicolorTrainPatterns = helper.loadIrisDataForVersicolor(withDataLines: train)
+        let virginicaTrainPatterns = helper.loadIrisDataForVirginica(withDataLines: train)
         
         let trainner = ComposedPerceptronTrainner.init(
             patterns: [setosaTrainPatterns, versicolorTrainPatterns, virginicaTrainPatterns],
             numberOfEpochs: 100
         )
-        
+
         let composedModel = trainner.train()
+        
+        
+        
+//        let (setosaTrainPatterns, setosaTestPatterns) = helper.loadIrisDataForSetosa()
+//        let (versicolorTrainPatterns, versicolorTestPatterns) = helper.loadIrisDataForVersicolor()
+//        let (virginicaTrainPatterns, virginicaTestPatterns) = helper.loadIrisDataForVirginica()
+//
+//        let trainner = ComposedPerceptronTrainner.init(
+//            patterns: [setosaTrainPatterns, versicolorTrainPatterns, virginicaTrainPatterns],
+//            numberOfEpochs: 100
+//        )
+//
+//        let composedModel = trainner.train()
         
     
 //        let trainner = SimplePerceptronTrainner(
