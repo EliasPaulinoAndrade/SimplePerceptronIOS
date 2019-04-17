@@ -10,18 +10,18 @@ import Foundation
 
 public struct ComposedPerceptronTrainner {
     
-    var simplePerceptronTrainners: [SimplePerceptronTrainner]
+    var simplePerceptronTrainners: [(trainner: SimplePerceptronTrainner, identifier: Int)]
     
-    public init(patterns: [[Pattern]], numberOfEpochs: Int) {
+    public init(patterns: [(trainnerPatterns: [Pattern], identifier: Int)], numberOfEpochs: Int) {
         
         simplePerceptronTrainners = []
         for modelPatterns in patterns {
             let simplePerceptronTrainner = SimplePerceptronTrainner.init(
-                patterns: modelPatterns,
+                patterns: modelPatterns.trainnerPatterns,
                 numberOfEpochs: numberOfEpochs
             )
             
-            simplePerceptronTrainners.append(simplePerceptronTrainner)
+            simplePerceptronTrainners.append((simplePerceptronTrainner, modelPatterns.identifier))
         }
     }
     
@@ -31,7 +31,7 @@ public struct ComposedPerceptronTrainner {
         
         for simpleTrainner in simplePerceptronTrainners {
            
-            composedModel.addModel(simpleTrainner.train())
+            composedModel.addModel(simpleTrainner.trainner.train(), withID: simpleTrainner.identifier)
         }
         
         return composedModel

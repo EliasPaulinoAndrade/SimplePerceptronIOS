@@ -16,50 +16,36 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let (train, _) = helper.slicedIrisDataLines()
+        let (train, test) = helper.slicedIrisDataLines()
         
-        let setosaTrainPatterns = helper.loadIrisDataForSetosa(withDataLines: train)
-        let versicolorTrainPatterns = helper.loadIrisDataForVersicolor(withDataLines: train)
-        let virginicaTrainPatterns = helper.loadIrisDataForVirginica(withDataLines: train)
+        let setosaTrainPatterns = helper.loadIrisPatterns(forIrisType: .setosa, withDataLines: train)
+        let versicolorTrainPatterns = helper.loadIrisPatterns(forIrisType: .versicolor, withDataLines: train)
+        let virginicaTrainPatterns = helper.loadIrisPatterns(forIrisType: .virginica, withDataLines: train)
         
         let trainner = ComposedPerceptronTrainner.init(
-            patterns: [setosaTrainPatterns, versicolorTrainPatterns, virginicaTrainPatterns],
+            patterns: [(setosaTrainPatterns, 0), (versicolorTrainPatterns, 1), (virginicaTrainPatterns, 2)],
             numberOfEpochs: 100
         )
 
         let composedModel = trainner.train()
         
+        let tester = ComposedPerceptronTester.init()
         
+        let testPatterns = helper.loadIrisPatterns(withDataLines: test)
         
-//        let (setosaTrainPatterns, setosaTestPatterns) = helper.loadIrisDataForSetosa()
-//        let (versicolorTrainPatterns, versicolorTestPatterns) = helper.loadIrisDataForVersicolor()
-//        let (virginicaTrainPatterns, virginicaTestPatterns) = helper.loadIrisDataForVirginica()
-//
-//        let trainner = ComposedPerceptronTrainner.init(
-//            patterns: [setosaTrainPatterns, versicolorTrainPatterns, virginicaTrainPatterns],
-//            numberOfEpochs: 100
-//        )
-//
-//        let composedModel = trainner.train()
+        print(
+            tester.predictPercentual(
+                forResults: tester.test(
+                    model: composedModel,
+                    withPatterns: testPatterns
+                )
+            )
+        )
         
-    
-//        let trainner = SimplePerceptronTrainner(
-//            patterns: trainPatterns,
-//            numberOfEpochs: 100
-//        )
-//
-//        let model = trainner.train()
-//
-//        let tester = SimplePerceptronTester()
-//
-//        print(
-//            tester.predictPercentual(
-//                forResults: tester.test(
-//                    model: model,
-//                    withPatterns: testPatterns
-//                )
-//            )
-//        )
+        let percentuals = tester.test(trainPatterns: [(setosaTrainPatterns, 0), (versicolorTrainPatterns, 1), (virginicaTrainPatterns, 2)], testPatterns: testPatterns, numberOfEpochs: 100, numberOfRealizations: 20)
+        
+        print(percentuals)
+        print(tester.variation(forPercentuals: percentuals))
     }
 }
 

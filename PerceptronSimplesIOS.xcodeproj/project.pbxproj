@@ -12,6 +12,7 @@
 		E3576B99226601110080E265 /* ComposedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3576B98226601110080E265 /* ComposedModel.swift */; };
 		E3576B9B226609AD0080E265 /* ComposedPerceptronTester.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3576B9A226609AD0080E265 /* ComposedPerceptronTester.swift */; };
 		E3576B9D2266123C0080E265 /* Array+slice.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3576B9C2266123C0080E265 /* Array+slice.swift */; };
+		E3576BA122661E420080E265 /* IrisType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3576BA022661E420080E265 /* IrisType.swift */; };
 		E3A48F182264A48F002E09F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A48F172264A48F002E09F2 /* AppDelegate.swift */; };
 		E3A48F1A2264A48F002E09F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A48F192264A48F002E09F2 /* ViewController.swift */; };
 		E3A48F1D2264A48F002E09F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3A48F1B2264A48F002E09F2 /* Main.storyboard */; };
@@ -61,6 +62,7 @@
 		E3576B98226601110080E265 /* ComposedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposedModel.swift; sourceTree = "<group>"; };
 		E3576B9A226609AD0080E265 /* ComposedPerceptronTester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposedPerceptronTester.swift; sourceTree = "<group>"; };
 		E3576B9C2266123C0080E265 /* Array+slice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+slice.swift"; sourceTree = "<group>"; };
+		E3576BA022661E420080E265 /* IrisType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IrisType.swift; sourceTree = "<group>"; };
 		E3A48F142264A48F002E09F2 /* PerceptronSimplesIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PerceptronSimplesIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3A48F172264A48F002E09F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3A48F192264A48F002E09F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +103,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E3576B9E226619800080E265 /* simple */ = {
+			isa = PBXGroup;
+			children = (
+				E3A48F2B2264A4B7002E09F2 /* Model.swift */,
+				E3A48F302264A543002E09F2 /* SimplePerceptronTrainner.swift */,
+				E3A48F3E226524B8002E09F2 /* SimplePerceptronTester.swift */,
+			);
+			path = simple;
+			sourceTree = "<group>";
+		};
+		E3576B9F226619A90080E265 /* composed */ = {
+			isa = PBXGroup;
+			children = (
+				E3576B962265FE740080E265 /* ComposedPerceptronTrainner.swift */,
+				E3576B98226601110080E265 /* ComposedModel.swift */,
+				E3576B9A226609AD0080E265 /* ComposedPerceptronTester.swift */,
+			);
+			path = composed;
+			sourceTree = "<group>";
+		};
 		E3A48F0B2264A48F002E09F2 = {
 			isa = PBXGroup;
 			children = (
@@ -136,16 +158,12 @@
 		E3A48F2A2264A4A7002E09F2 /* perceptron */ = {
 			isa = PBXGroup;
 			children = (
+				E3576B9F226619A90080E265 /* composed */,
+				E3576B9E226619800080E265 /* simple */,
 				E3A48F2C2264A4B7002E09F2 /* extensions */,
-				E3A48F2B2264A4B7002E09F2 /* Model.swift */,
-				E3A48F302264A543002E09F2 /* SimplePerceptronTrainner.swift */,
 				E3A48F322264A6F6002E09F2 /* Pattern.swift */,
 				E3A48F382264C38E002E09F2 /* DataManager.swift */,
-				E3A48F3E226524B8002E09F2 /* SimplePerceptronTester.swift */,
 				E3576B942265F69A0080E265 /* PredictionResult.swift */,
-				E3576B962265FE740080E265 /* ComposedPerceptronTrainner.swift */,
-				E3576B98226601110080E265 /* ComposedModel.swift */,
-				E3576B9A226609AD0080E265 /* ComposedPerceptronTester.swift */,
 			);
 			path = perceptron;
 			sourceTree = "<group>";
@@ -175,6 +193,7 @@
 			children = (
 				E3A48F3C22650589002E09F2 /* irisData */,
 				E3A48F7F22655179002E09F2 /* PerceptronHelper.swift */,
+				E3576BA022661E420080E265 /* IrisType.swift */,
 			);
 			path = "Iris Predict";
 			sourceTree = "<group>";
@@ -295,6 +314,7 @@
 			files = (
 				E3A48F1A2264A48F002E09F2 /* ViewController.swift in Sources */,
 				E3A48F8022655179002E09F2 /* PerceptronHelper.swift in Sources */,
+				E3576BA122661E420080E265 /* IrisType.swift in Sources */,
 				E3A48F182264A48F002E09F2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
